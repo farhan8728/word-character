@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <textarea name="" id="text-field" cols="30" rows="10"></textarea>
+
+    
+    <p>Number of characters: <span id="character-count"></span> </p>
+    <p>Number of words: <span id="word-count"></span> </p>
+
+    <script>
+
+       document.getElementById('text-field').addEventListener('keyup', countCharactersAndWords);
+
+
+       function countCharactersAndWords() {
+            // Get the value of the text field
+            var text = this.value;
+
+            // Count the number of characters
+            var characterCount = text.length;
+
+            // Count the number of words
+            var wordCount = text.split(' ').length;
+
+            // Update the character count element
+            document.getElementById('character-count').innerHTML = characterCount;
+
+            // Update the word count element
+            document.getElementById('word-count').innerHTML = wordCount;
+        }
+
+
+    </script>
+</body>
+</html>
